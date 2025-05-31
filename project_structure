@@ -1,0 +1,19 @@
+pdf_ingestion_pipeline/
+│
+├── data/
+│   ├── set_a/          # New PDFs to ingest
+│   └── set_b/          # Sample PDFs to pre-upload for integration test
+│
+├── src/
+│   ├── pdf_parser.py         # Extract text + metadata using LlamaIndex
+│   ├── embedder.py           # Generate embeddings using mixedbread model
+│   ├── qdrant_client.py      # Qdrant setup and helper functions
+│   ├── deduplicator.py       # Check for filename + content hash
+│   ├── pipeline.py           # Main script to run the pipeline
+│
+├── tests/
+│   ├── test_ingestion.py     # Integration tests: new + duplicate handling
+│
+├── requirements.txt
+├── README.md
+└── .env                      # API Key, URL
